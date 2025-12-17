@@ -11,6 +11,45 @@ Add this to your Gemfile (in the test group) and run `bundle install`:
 gem 'rspec-kungfuhamster'
 ```
 
+# Usage
+
+After installing the gem, you can use the formatter in several ways:
+
+## Command Line
+
+Run RSpec with the formatter specified:
+
+```bash
+rspec --format RspecKungFuHamster
+```
+
+## Configuration File
+
+Add to your `.rspec` file in your project root:
+
+```
+--format RspecKungFuHamster
+```
+
+## RSpec Configuration
+
+Add to your `spec/spec_helper.rb` or `spec/rails_helper.rb`:
+
+```ruby
+RSpec.configure do |config|
+  config.formatter = RspecKungFuHamster
+end
+```
+
+Or if you want to use multiple formatters:
+
+```ruby
+RSpec.configure do |config|
+  config.formatter = :progress  # or :documentation
+  config.add_formatter RspecKungFuHamster
+end
+```
+
 # Development
 
 ## Automated Version Bumping

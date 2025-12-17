@@ -34,12 +34,30 @@ gem 'rspec-kungfuhamster'
 
 After installing the gem, you can use the formatter in several ways:
 
+## Formatters
+
+The gem provides two formatters:
+
+### Basic Formatter
+
+The basic formatter shows just the animated kung fu hamster with color-coded animation.
+
+### Detailed Formatter
+
+The detailed formatter shows the animated kung fu hamster with additional information below:
+- Color-coded statistics (passed/pending/failed out of total examples)
+- Last spec file that was executed
+
 ## Command Line
 
 Run RSpec with the formatter specified:
 
 ```bash
+# Basic formatter
 rspec --format RspecKungFuHamster::Formatter
+
+# Detailed formatter
+rspec --format RspecKungFuHamster::DetailedFormatter
 ```
 
 ## Configuration File
@@ -47,7 +65,11 @@ rspec --format RspecKungFuHamster::Formatter
 Add to your `.rspec` file in your project root:
 
 ```
+# Basic formatter
 --format RspecKungFuHamster::Formatter
+
+# OR detailed formatter
+--format RspecKungFuHamster::DetailedFormatter
 ```
 
 ## RSpec Configuration
@@ -56,7 +78,11 @@ Add to your `spec/spec_helper.rb` or `spec/rails_helper.rb`:
 
 ```ruby
 RSpec.configure do |config|
+  # Basic formatter
   config.formatter = RspecKungFuHamster::Formatter
+
+  # OR detailed formatter
+  config.formatter = RspecKungFuHamster::DetailedFormatter
 end
 ```
 
@@ -65,7 +91,7 @@ Or if you want to use multiple formatters:
 ```ruby
 RSpec.configure do |config|
   config.formatter = :progress  # or :documentation
-  config.add_formatter RspecKungFuHamster::Formatter
+  config.add_formatter RspecKungFuHamster::DetailedFormatter
 end
 ```
 

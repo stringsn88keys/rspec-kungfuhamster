@@ -1,8 +1,10 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'rspec_kung_fu_hamster/version'
+
 Gem::Specification.new do |s|
   s.name = 'rspec-kungfuhamster'
-  s.version = '0.1.0'
+  s.version = RspecKungFuHamster::VERSION
   s.authors = ['Thomas Powell']
   s.email = ['twilliampowell@gmail.com']
   s.homepage = 'https://github.com/stringsn88keys/rspec-kungfuhamster'

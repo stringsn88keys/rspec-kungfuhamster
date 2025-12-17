@@ -1,5 +1,6 @@
 require 'rspec'
 require 'rspec/core/formatters/base_text_formatter'
+require 'rspec_kung_fu_hamster/version'
 
 rspec_bin = $0.split('/').last
 

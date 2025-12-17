@@ -3,6 +3,25 @@ rspec-kungfuhamster
 
 Animated kung fu hamster formatter
 
+# Sample Output
+
+As your tests run, you'll see an animated kung fu hamster performing various martial arts moves:
+
+```
+    ()__()
+    / o o\
+   |' =Y=';----
+   { \  / }
+    mmm mmm
+```
+
+The hamster is colorized based on your test results:
+- **Green** portion: Passing tests
+- **Yellow** portion: Pending tests
+- **Red** portion: Failing tests
+
+The hamster cycles through different kung fu poses as each test completes, creating an animated effect in your terminal!
+
 # Installation
 
 Add this to your Gemfile (in the test group) and run `bundle install`:

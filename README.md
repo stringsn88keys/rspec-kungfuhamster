@@ -39,7 +39,7 @@ After installing the gem, you can use the formatter in several ways:
 Run RSpec with the formatter specified:
 
 ```bash
-rspec --format RspecKungFuHamster
+rspec --format RspecKungFuHamster::Formatter
 ```
 
 ## Configuration File
@@ -47,7 +47,7 @@ rspec --format RspecKungFuHamster
 Add to your `.rspec` file in your project root:
 
 ```
---format RspecKungFuHamster
+--format RspecKungFuHamster::Formatter
 ```
 
 ## RSpec Configuration
@@ -56,7 +56,7 @@ Add to your `spec/spec_helper.rb` or `spec/rails_helper.rb`:
 
 ```ruby
 RSpec.configure do |config|
-  config.formatter = RspecKungFuHamster
+  config.formatter = RspecKungFuHamster::Formatter
 end
 ```
 
@@ -65,7 +65,7 @@ Or if you want to use multiple formatters:
 ```ruby
 RSpec.configure do |config|
   config.formatter = :progress  # or :documentation
-  config.add_formatter RspecKungFuHamster
+  config.add_formatter RspecKungFuHamster::Formatter
 end
 ```
 

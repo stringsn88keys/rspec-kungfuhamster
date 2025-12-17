@@ -4,8 +4,9 @@ require 'rspec_kung_fu_hamster/version'
 
 rspec_bin = $0.split('/').last
 
-class RspecKungFuHamster < RSpec::Core::Formatters::BaseTextFormatter
-  RSpec::Core::Formatters.register self,
+module RspecKungFuHamster
+  class Formatter < RSpec::Core::Formatters::BaseTextFormatter
+    RSpec::Core::Formatters.register self,
 #    :start,
 #     :example_start
 #    :message,
@@ -110,4 +111,5 @@ class RspecKungFuHamster < RSpec::Core::Formatters::BaseTextFormatter
     "   { \\  / }    ",
     "    mmm mmm    "
   ]
+  end
 end
